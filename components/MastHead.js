@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Link from "next/link"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBoxOpen, faBrain } from '@fortawesome/free-solid-svg-icons'
 import { motion } from "framer-motion"
 import Image from 'next/image';
 
@@ -40,17 +38,65 @@ export default function Home() {
                                       repeatDelay: 0,
                                     }}
                                 >
-                                    <Image
-                                      className="invert text-center inline"
-                                      priority
-                                      src="/images/favicon.svg"
-                                      height={64}
-                                      width={64}
-                                      alt="Large Language Model"
-                                    />
+                                        <Image
+                                        className="invert text-center inline translate-x-full"
+                                        src="/images/bubble.svg"
+                                        height={85}
+                                        width={85}
+                                        alt="Bubble"
+                                        style={{ transform: 'translate(100px, 0px)' }}
+                                        />
+                                        <Image
+                                        className="invert text-center inline"
+                                        src="/images/favicon.svg"
+                                        height={85}
+                                        width={85}
+                                        alt="Large Language Model"
+                                        style={{ transform: 'translate(-50px, 50px)' }}
+                                        />
+                                        
                                 </motion.div>
-                                <FontAwesomeIcon icon={faBoxOpen} className="text-5xl" />
+                                <motion.div
+                                            animate={{
+                                                scale: [0.9, 1, 0.9], // Zooms in (scale: 1.2) and out (scale: 1) in a loop
+                                            }}
+                                            transition={{
+                                                duration: 2,
+                                                ease: 'easeInOut',
+                                                repeat: Infinity, // Repeat the animation indefinitely
+                                            }}
+                                        >
+                                            <Image
+                                            className="invert text-center inline"
+                                            src="/images/eye.svg"
+                                            height={40}
+                                            width={40}
+                                            alt="Eye"
+                                            style={{ transform: 'translate(50px, -100px)' }}
+                                            />
+                                </motion.div>
+                                        <motion.div
+                                            animate={{
+                                                scale: [1, 0.9, 1], // Zooms in (scale: 1.2) and out (scale: 1) in a loop
+                                            }}
+                                            transition={{
+                                                duration: 2,
+                                                ease: 'easeInOut',
+                                                repeat: Infinity, // Repeat the animation indefinitely
+                                            }}
+                                        >
+                                            <Image
+                                            className="invert text-center inline"
+                                            src="/images/hand.svg"
+                                            height={30}
+                                            width={30}
+                                            alt="Hand"
+                                            style={{ transform: 'translate(80px, -120px)' }}
+                                            />
+                                        </motion.div>
                             </div>
+                            
+                            
                             <h2 className="text-4xl my-10 font-extralight">
                                 AI for Humans.
                             </h2>
