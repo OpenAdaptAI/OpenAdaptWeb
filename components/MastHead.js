@@ -46,21 +46,19 @@ export default function Home() {
                             <div className="flex flex-col align-items-center justify-content-center">
                                 <div className="relative inline-block">
                                     {/* <AnimatedLogo /> */}
-                                    <video
-                                        controls
-                                        className="demo-video"
-                                        style={{
-                                            maxWidth: '80%',
-                                            margin: '0 auto',
-                                        }}
+                                    <iframe
+                                      style={{
+                                        maxWidth: '200%',
+                                        width: '200%'
+                                        margin: '0 auto',
+                                      }}
+                                      src="https://www.youtube.com/embed/OVERugs50cQ?controls=0&autoplay=1"
+                                      title="YouTube video player"
+                                      frameborder="0"
+                                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                                      allowfullscreen
                                     >
-                                        <source
-                                            src="./demo.mp4"
-                                            type="video/mp4"
-                                        />
-                                        Your browser does not support the video
-                                        tag.
-                                    </video>
+                                    </iframe>
                                 </div>
                             </div>
                             <h3 className="mt-8 font-light">
