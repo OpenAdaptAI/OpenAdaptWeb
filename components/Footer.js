@@ -2,15 +2,14 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons'
+import AnimatedBackground from './AnimatedBackground'
 
 import styles from './Footer.module.css'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
 
-    // Function to handle the reveal of the email address
     const revealEmail = () => {
-        // Construct the email address and open in mail client
         const user = 'hello'
         const domain = 'openadapt.ai'
         window.location.href = `mailto:${user}@${domain}`
@@ -18,9 +17,11 @@ export default function Footer() {
 
     return (
         <div className={styles.footerContainer}>
-            <footer className="grid grid-flow-row auto-rows-max gap-4">
+            <AnimatedBackground /> {/* Background animation component */}
+            <div className={styles.overlay}></div> {/* Dark overlay for readability */}
+            <footer className={`${styles.footerContent} relative grid grid-flow-row auto-rows-max gap-4`}>
                 <div className="m-auto pb-10">
-                    <div className="flex items-center justify-center z-10">
+                    <div className="flex items-center justify-center z-30">
                         <Image
                             className="invert"
                             priority
@@ -58,7 +59,7 @@ export default function Footer() {
                     <div className={styles.footerLinks}>
                         <a href="/privacy-policy" className={styles.link}>
                             Privacy Policy
-                        </a>{' '}
+                        </a>
                         <a href="/terms-of-service" className={styles.link}>
                             Terms of Service
                         </a>
