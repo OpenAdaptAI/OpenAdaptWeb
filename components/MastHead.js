@@ -8,6 +8,7 @@ import {
     faLinkedin,
     faDiscord,
     faGithub,
+    faReddit,
     faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import { motion } from 'framer-motion'
@@ -216,6 +217,18 @@ export default function Home() {
                         >
                             <FontAwesomeIcon
                                 icon={faLinkedin}
+                                className="text-2xl"
+                            />
+                        </a>
+                    </div>
+                    {/* Reddit Icon */}
+                    <div
+                        className="relative z-50 inline-block mr-3"
+                        style={{ transform: 'translateY(-5px)' }}
+                    >
+                        <a href="https://reddit.com/r/OpenAdaptAI" aria-label="Join us on Reddit" title="Join us on Reddit">
+                            <FontAwesomeIcon
+                                icon={faReddit}
                                 className="text-2xl"
                             />
                         </a>
